@@ -47,7 +47,7 @@ with col2:
 
 # SETTING UP DATABASE CONNECTION
 # Connect to the SQLite database (creates `kula_heroes.db` if it doesn’t exist)
-conn = sqlite3.connect('/Users/rosemarykanyoro/Documents/DISH/kula_heroes.db')
+conn = sqlite3.connect('kula_heroes.db')
 cursor = conn.cursor()
 
 # Create the food_logs table if it doesn’t exist
@@ -65,7 +65,7 @@ conn.commit()
 
 # LOADING DATA
 # Load the static food item list from CSV
-file_path = '/Users/rosemarykanyoro/Documents/DISH/food_items.csv'
+file_path = 'food_items.csv'
 food_data = pd.read_csv(file_path)
 
 # FILTERING DATA FOR FRUITS AND VEGETABLES
@@ -108,7 +108,7 @@ st.markdown("<h2 style='color: #FF6347; font-family: \"Comic Sans MS\", cursive;
 
 # SETTING UP SIDEBAR
 # Sidebar with cover image and styled welcome message
-st.sidebar.image('/Users/rosemarykanyoro/Documents/DISH/images/cover.webp', width=250)
+st.sidebar.image('images/cover.webp', width=250)
 
 # Styling "Nutri!" with large, colorful font
 st.sidebar.markdown(
@@ -131,7 +131,7 @@ for i in range(0, len(fruits), 5):  # Step through 5 items at a time for two row
     for idx, row_item in enumerate(fruits.iloc[i:i+5].iterrows()):  # Process 5 items per row
         _, row_data = row_item
         fruit_name = row_data['Food'].lower()
-        fruit_path = f'/Users/rosemarykanyoro/Documents/DISH/images/{fruit_name}.webp'
+        fruit_path = f'images/{fruit_name}.webp'
 
         # Assign each item to the correct column within the row
         with fruit_row[idx]:
@@ -154,7 +154,7 @@ for i in range(0, len(vegetables), 5):  # Step through 5 items at a time for two
     for idx, row_item in enumerate(vegetables.iloc[i:i+5].iterrows()):  # Process 5 items per row
         _, row_data = row_item
         veg_name = row_data['Food'].lower()
-        veg_path = f'/Users/rosemarykanyoro/Documents/DISH/images/{veg_name}.webp'
+        veg_path = f'images/{veg_name}.webp'
 
         # Assign each item to the correct column within the row
         with veg_row[idx]:
@@ -363,14 +363,14 @@ if "refresh_counter" not in st.session_state:
 st.markdown("<h2 style='color: #8ac926; font-family: \"Comic Sans MS\", cursive; text-align: center;'>Let's Play! What Do We Call It in Swahili?</h2>", unsafe_allow_html=True)
 
 # Load the culture data from CSV
-culture_data = pd.read_csv('/Users/rosemarykanyoro/Documents/DISH/culture.csv')
+culture_data = pd.read_csv('culture.csv')
 
 # Select a random fruit or vegetable
 import random
 random_item = culture_data.sample(1).iloc[0]
 english_name = random_item['English']
 swahili_name = random_item['Swahili']
-image_path = f"/Users/rosemarykanyoro/Documents/DISH/images/{english_name.lower()}.webp"  # Assumes image filenames are lowercase English names
+image_path = f"images/{english_name.lower()}.webp"  # Assumes image filenames are lowercase English names
 
 # Display the image and English name
 col1, col2, col3 = st.columns([1, 2, 1])  # Center image in middle column
