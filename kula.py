@@ -380,7 +380,7 @@ with col2:
 
 # Add a button to reveal the Swahili name
 if st.button("Reveal!"):
-    st.markdown(f"<h3 style='text-align: center; color: #FFA500;'>In Swahili, we call it: {swahili_name}!</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center; color: #4682B4;'>In Swahili, we call it: {swahili_name}!</h3>", unsafe_allow_html=True)
 
 # Button to load the next item by increasing the refresh counter
 if st.button("Try Another One!"):
