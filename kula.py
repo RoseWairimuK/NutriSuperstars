@@ -11,17 +11,17 @@ def load_lottiefile(filepath: str):
         return json.load(f)
 
 # Load the hello lottie animation
-lottie_hello = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/hello.json")
-lottie_trophy = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/winner.json")
-lottie_great = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/great.json")
-lottie_bear = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/bear.json")
-lottie_strong = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/strong.json")
-lottie_energy = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/energy.json")
-lottie_healthy = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/healthy.json")
-lottie_sick = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/sick.json")
-lottie_eyes = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/eyes.json")
-lottie_learn = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/learn.json")
-lottie_avocado = load_lottiefile("/Users/rosemarykanyoro/Documents/DISH/gifs/avocado.json")
+lottie_hello = load_lottiefile("gifs/hello.json")
+lottie_trophy = load_lottiefile("gifs/winner.json")
+lottie_great = load_lottiefile("gifs/great.json")
+lottie_bear = load_lottiefile("gifs/bear.json")
+lottie_strong = load_lottiefile("gifs/strong.json")
+lottie_energy = load_lottiefile("gifs/energy.json")
+lottie_healthy = load_lottiefile("gifs/healthy.json")
+lottie_sick = load_lottiefile("gifs/sick.json")
+lottie_eyes = load_lottiefile("gifs/eyes.json")
+lottie_learn = load_lottiefile("gifs/learn.json")
+lottie_avocado = load_lottiefile("gifs/avocado.json")
 
 # Get today's date and day of the week
 today = datetime.now().date()
