@@ -32,10 +32,10 @@ matplotlib-inline==0.1.7
 mdurl==0.1.2
 narwhals==1.9.1
 nest-asyncio==1.6.0
-numpy==1.24.4
+numpy
 openpyxl==3.1.5
 packaging==24.1
-pandas==2.0.3
+pandas
 parso==0.8.4
 pexpect==4.9.0
 pickleshare==0.7.5
@@ -61,8 +61,8 @@ rpds-py==0.20.0
 six==1.16.0
 smmap==5.0.1
 stack-data==0.6.3
-streamlit==1.39.0
-streamlit-lottie==0.0.5
+streamlit
+streamlit-lottie
 tenacity==9.0.0
 toml==0.10.2
 tornado==6.4.1
@@ -72,3 +72,5 @@ tzdata==2024.2
 urllib3==2.2.3
 wcwidth==0.2.13
 zipp==3.20.2
+setuptools
+
