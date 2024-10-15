@@ -415,6 +415,38 @@ with center_col:
 with right_col:
     st.write("")  # Leave empty
 
+# VISITOR COUNT
+def update_visitor_count():
+    # Open the counter file, create if it doesn't exist
+    try:
+        with open("counter.txt", "r+") as f:
+            # Read the current count
+            count_str = f.read().strip()
+            if count_str.isdigit():  # Check if the count is a number
+                count = int(count_str)
+            else:
+                count = 0  # Initialize count if file is empty or invalid
+            
+            # Increment the count
+            count += 1
+            # Move the cursor to the beginning of the file and update the count
+            f.seek(0)
+            f.write(str(count))
+            f.truncate()
+    except FileNotFoundError:
+        # If the file does not exist, create it and initialize with 1
+        with open("counter.txt", "w") as f:
+            count = 1
+            f.write(str(count))
+    return count
+
+# Get the updated visitor count
+visitor_count = update_visitor_count()
+
+# Display the visitor count as # count
+st.markdown(f"<p style='text-align: center; color: #A9A9A9; font-size: 12px;'>#{visitor_count}</p>", unsafe_allow_html=True)
+
+
 # CLOSE DATABASE CONNECTION
 conn.close()
 
