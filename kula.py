@@ -118,7 +118,7 @@ st.sidebar.markdown(
 
 # Additional text in the sidebar in default styling
 st.sidebar.write("This is a brief prototype of the Nutri-Superstars platform for the DISH Competition 2024 ")  
-st.sidebar.write("Tackling the notorious Fruits & Veggies, the platform demonstrates how AI can be harnessed to make nutrition education more accessible and appealing to younger children.")
+st.sidebar.write("Tackling the notorious Fruits & Veggies, the platform demonstrates how technology can be harnessed to make nutrition education more accessible and appealing to younger children.")
 st.sidebar.write("Disclaimer: Only few examples included for demonstration purposes. This can be expanded to different aspects of nutrition and culture. Expert informed methodology and backend to be explained upon request.")
 
 # FRUITS SECTION
@@ -359,8 +359,8 @@ with avocado_text_col:
 if "refresh_counter" not in st.session_state:
     st.session_state.refresh_counter = 0
 
-# CULTURE SECTION
-st.markdown("<h2 style='color: #8ac926; font-family: \"Comic Sans MS\", cursive; text-align: center;'>Let's Play! What Do We Call It in Swahili?</h2>", unsafe_allow_html=True)
+# CULTURE SECTION #https://nutrition.co.ke/swahili-words-for-common-fruits/
+st.markdown("<h2 style='color: #8ac926; font-family: \"Comic Sans MS\", cursive; text-align: center;'>Let's Play! What Do We Call it in Swahili?</h2>", unsafe_allow_html=True)
 
 # Load the culture data from CSV
 culture_data = pd.read_csv('culture.csv')
